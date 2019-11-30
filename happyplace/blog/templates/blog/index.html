@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>HappyPlace</title>
+    
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    
+     <style>
+         body  {
+              background-image:url(images/happy4.jpg');
+              background-color: #cccccc;
+            }   
+</style>
+</head>
+<body class=".body">
+    
+    <header>
+          <div class="main">
+             <div class="logo">
+                 <img src="{% static "images/1.jpg" %}"/>
+               
+
+             </div>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="about/">About</a></li>
+                    <li><a href="advice/">Advice</a></li>
+                    <li><a href="FAQ/">FAQ</a></li>
+                    <li><a href="contact/">Contact</a></li>
+                    <li><a href="login/">Login</a></li>
+                    <li><a href="loginCounselor/">LoginCounselor</a></li>
+                    
+
+
+
+
+                </ul>
+
+            </div>
+            <div class="title">
+                <h1>Be Happy</h1>
+                <p>What type of counseling are you looking for?</p>    
+
+            </div>
+
+           <div class="button">
+               <a href="#" class="btn">Individual</a>
+               <a href="#" class="btn">Child</a>
+
+           </div>
+
+
+
+</body>
+</html>
