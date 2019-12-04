@@ -33,7 +33,10 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
+    'payments.apps.PaymentsConfig',
+    #'schedule.apps.ScheduleConfig',
     'crispy_forms',
+    #'djangobower',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +60,7 @@ ROOT_URLCONF = 'happyplace.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,7 +126,21 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
+#STATICFILES_DIRS = ()
+
+#STATICFILES_FINDERS = ('djangobower.finders.BowerFinder',)
+#BOWER_COMPONENTS_ROOT = '/root/happyplace/schedule/components/'
+#BOWER_INSTALLED_APPS = (
+    #'jquery',
+    #'jquery-ui',
+    #'bootstrap'
+#)
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-dashboard'
 LOGIN_URL = 'login'
+
+STRIPE_SECRET_KEY = 'sk_test_pgGQGoGMceIn9r3kvQNCsia700a0iGm0bd'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_bdBxb52qZWTx9FK2kFjAQ7MH00kT40EVtp'
