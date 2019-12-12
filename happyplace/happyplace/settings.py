@@ -34,15 +34,16 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'payments.apps.PaymentsConfig',
-    #'schedule.apps.ScheduleConfig',
+    'schedule.apps.ScheduleConfig',
+    'chat.apps.ChatConfig',
     'crispy_forms',
-    #'djangobower',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +75,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'happyplace.wsgi.application'
+ASGI_APPLICATION = 'happyplace.routing.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 
 # Database
@@ -125,16 +136,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
-#STATICFILES_DIRS = ()
-
-#STATICFILES_FINDERS = ('djangobower.finders.BowerFinder',)
-#BOWER_COMPONENTS_ROOT = '/root/happyplace/schedule/components/'
-#BOWER_INSTALLED_APPS = (
-    #'jquery',
-    #'jquery-ui',
-    #'bootstrap'
-#)
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
