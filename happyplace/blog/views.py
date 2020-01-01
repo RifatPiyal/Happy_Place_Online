@@ -43,3 +43,5 @@ def c_dashboard(request):
 
 def loginCounselor(request):
     return render(request, 'blog/loginCounselor.html')
+
+
