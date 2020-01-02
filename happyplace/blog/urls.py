@@ -14,6 +14,4 @@ urlpatterns = [
     path('loginCounselor/', views.loginCounselor, name='blog-loginCounselor'),
     path('loginCounselor/cdashboard/', views.c_dashboard, name='blog-Cdashboard'),
 
-
 ]
-

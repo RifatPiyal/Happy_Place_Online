@@ -1,4 +1,5 @@
 import stripe
+
 from django.conf import settings
 from django.views.generic.base import TemplateView
 from django.shortcuts import render
